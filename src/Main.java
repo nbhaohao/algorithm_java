@@ -1,6 +1,7 @@
-import algorithms.SelectionSort;
-import utils.ArrayGenerator;
-import algorithms.LinearSearch;
+import algorithm.SelectionSort;
+import entity.Student;
+import util.ArrayGenerator;
+import algorithm.LinearSearch;
 
 public class Main {
     public static void testLinearSearch() {
@@ -19,10 +20,10 @@ public class Main {
         }
     }
 
-    public static void printArray(Integer[] array) {
-        for (int i : array
+    public static <T> void printArray(T[] array) {
+        for (T entity : array
         ) {
-            System.out.print(i + " ");
+            System.out.print(entity + " ");
         }
         System.out.println();
     }
@@ -31,6 +32,9 @@ public class Main {
         Integer[] data = {6, 4, 2, 3, 1, 5};
         SelectionSort.sort(data);
         printArray(data);
+        Student[] students = {new Student("Alice", 98), new Student("Bobo", 100), new Student("Charles", 66)};
+        SelectionSort.sort(students);
+        printArray(students);
     }
 
     public static void main(String[] args) {
