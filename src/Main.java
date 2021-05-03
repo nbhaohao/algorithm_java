@@ -19,7 +19,7 @@ public class Main {
         }
     }
 
-    public static void printArray(int[] array) {
+    public static void printArray(Integer[] array) {
         for (int i : array
         ) {
             System.out.print(i + " ");
@@ -28,7 +28,7 @@ public class Main {
     }
 
     public static void testSelectionSort() {
-        int[] data = {6, 4, 2, 3, 1, 5};
+        Integer[] data = {6, 4, 2, 3, 1, 5};
         SelectionSort.sort(data);
         printArray(data);
     }
