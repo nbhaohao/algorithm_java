@@ -1,4 +1,4 @@
-package LinearSearch;
+package utils;
 
 public class ArrayGenerator {
     private ArrayGenerator() {

@@ -1,4 +1,4 @@
-package LinearSearch;
+package algorithms;
 
 public class LinearSearch {
     private LinearSearch() {
