@@ -1,5 +1,7 @@
 package algorithm;
 
+import util.SortingHelper;
+
 public class SelectionSort {
     private SelectionSort() {
     }
@@ -19,13 +21,7 @@ public class SelectionSort {
                 }
             }
             // 交换位置
-            swap(arr, i, minIndex);
+            SortingHelper.swap(arr, i, minIndex);
         }
-    }
-
-    private static <E> void swap(E[] arr, int i, int j) {
-        E temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }

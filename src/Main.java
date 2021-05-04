@@ -2,6 +2,7 @@ import algorithm.SelectionSort;
 import entity.Student;
 import util.ArrayGenerator;
 import algorithm.LinearSearch;
+import util.SortingHelper;
 
 public class Main {
     public static void testLinearSearch() {
@@ -29,15 +30,18 @@ public class Main {
     }
 
     public static void testSelectionSort() {
-        Integer[] data = {6, 4, 2, 3, 1, 5};
-        SelectionSort.sort(data);
-        printArray(data);
-        Student[] students = {new Student("Alice", 98), new Student("Bobo", 100), new Student("Charles", 66)};
-        SelectionSort.sort(students);
-        printArray(students);
+        int n = 1_0000;
+        Integer[] data = ArrayGenerator.generateRandomArray(n, n);
+        SortingHelper.sortTest("SelectionSort", data);
+    }
+
+    public static void testInsertionSort() {
+        int n = 1_0000;
+        Integer[] data = ArrayGenerator.generateRandomArray(n, n);
+        SortingHelper.sortTest("InsertionSort", data);
     }
 
     public static void main(String[] args) {
-        testSelectionSort();
+        testInsertionSort();
     }
 }
