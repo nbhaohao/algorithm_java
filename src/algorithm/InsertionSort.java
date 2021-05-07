@@ -23,4 +23,23 @@ public class InsertionSort {
             }
         }
     }
+
+    // 优化版，减少交换的操作次数
+    public static <E extends Comparable<E>> void sort2(E[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            E temp = arr[i];
+            boolean isSwap = false;
+            for (int j = i; j > 0; j--) {
+                if (arr[j].compareTo(arr[j - 1]) < 0) {
+                    arr[j - 1] = arr[j];
+                    isSwap = true;
+                } else {
+                    if (isSwap) {
+                        arr[j - 1] = temp;
+                    }
+                    break;
+                }
+            }
+        }
+    }
 }
