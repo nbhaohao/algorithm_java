@@ -96,6 +96,9 @@ public class Array<E> {
             data[i - 1] = data[i];
         }
         size--;
+        if (size == data.length / 2) {
+            resize(data.length / 2);
+        }
         return removedValue;
     }
 
