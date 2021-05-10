@@ -52,6 +52,9 @@ public class Main {
         System.out.println(array);
         array.addFirst(-1);
         System.out.println(array);
+
+        array.remove(2);
+        System.out.println(array);
     }
 
     public static void main(String[] args) {
