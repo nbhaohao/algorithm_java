@@ -1,4 +1,5 @@
 import dataStructure.Array;
+import dataStructure.Stack.ArrayStack;
 import util.ArrayGenerator;
 import algorithm.LinearSearch;
 import util.SortingHelper;
@@ -55,7 +56,18 @@ public class Main {
         System.out.println(array);
     }
 
+    public static void testStack() {
+        ArrayStack<Object> stack = new ArrayStack<>();
+        for (int i = 0; i < 5; i++) {
+            stack.push(i);
+            System.out.println(stack);
+        }
+
+        stack.pop();
+        System.out.println(stack);
+    }
+
     public static void main(String[] args) {
-        testArray();
+        testStack();
     }
 }
