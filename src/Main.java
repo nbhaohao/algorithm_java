@@ -1,4 +1,5 @@
 import dataStructure.Array;
+import dataStructure.Queue.ArrayQueue;
 import dataStructure.Stack.ArrayStack;
 import util.ArrayGenerator;
 import algorithm.LinearSearch;
@@ -67,7 +68,19 @@ public class Main {
         System.out.println(stack);
     }
 
+    public static void testQueue() {
+        ArrayQueue<Integer> queue = new ArrayQueue<>();
+        for (int i = 0; i < 10; i++) {
+            queue.enqueue(i);
+            System.out.println(queue);
+            if (i % 3 == 2) {
+                queue.dequeue();
+                System.out.println(queue);
+            }
+        }
+    }
+
     public static void main(String[] args) {
-        testStack();
+        testQueue();
     }
 }
